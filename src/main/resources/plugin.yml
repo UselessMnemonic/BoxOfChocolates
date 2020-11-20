@@ -1,6 +1,6 @@
 name: BoxOfChocolates
 version: 1.0
-author: UselessMnemonic
+authors: [UselessMnemonic, Roy Sanchez]
 description: Adds chocolate treats, each with unique properties
 website: https://github.com/UselessMnemonic/BoxOfChocolates
 
