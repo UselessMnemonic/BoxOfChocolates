@@ -1,0 +1,11 @@
+name: BoxOfChocolates
+version: 1.0
+author: UselessMnemonic
+description: Adds chocolate treats, each with unique properties
+website: https://github.com/UselessMnemonic/BoxOfChocolates
+
+main: me.uselessmnemonic.boxofchocolates.Plugin
+depend: [Slimefun]
+load: POSTWORLD
+
+api-version: 1.16
