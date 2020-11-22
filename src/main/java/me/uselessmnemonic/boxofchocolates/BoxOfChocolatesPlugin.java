@@ -6,6 +6,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class BoxOfChocolatesPlugin extends JavaPlugin implements SlimefunAddon {
 
+    /**
+     * Singleton access
+     */
     private static BoxOfChocolatesPlugin instance;
     public static BoxOfChocolatesPlugin getInstance() {
         return instance;
@@ -15,6 +18,11 @@ public class BoxOfChocolatesPlugin extends JavaPlugin implements SlimefunAddon {
         if (instance == null) instance = this;
     }
 
+    /**
+     * Creates a NamespacedKey under this plugin.
+     * @param key Name of the key
+     * @return A NamespacedKey
+     */
     public static NamespacedKey getNamespacedKey(String key) {
         return new NamespacedKey(instance, key);
     }

@@ -4,7 +4,7 @@ authors: [UselessMnemonic, Roy Sanchez]
 description: Adds chocolate treats, each with unique properties
 website: https://github.com/UselessMnemonic/BoxOfChocolates
 
-main: me.uselessmnemonic.boxofchocolates.Plugin
+main: me.uselessmnemonic.boxofchocolates.BoxOfChocolatesPlugin
 depend: [Slimefun]
 load: POSTWORLD
 
