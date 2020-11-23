@@ -44,7 +44,7 @@ public class BoxOfChocolatesPlugin extends JavaPlugin implements SlimefunAddon {
         Category chocolateCategory = new Category(categoryKey, categoryItem);
 
         // create the in-game item
-        SlimefunItemStack itemStack = new SlimefunItemStack("DarkChocolateCaramel", Material.COCOA, "Dark Chocolate Caramel", "Bitter chocolate with a", "gooey caramel center.");
+        SlimefunItemStack itemStack = new SlimefunItemStack("DARK_CHOC_CARMEL", Material.COCOA, "Dark Chocolate Caramel", "Bitter chocolate with a", "gooey caramel center.");
 
         // a crafting recipe (3x3)
         ItemStack[] recipe = {
