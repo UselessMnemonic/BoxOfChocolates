@@ -3,10 +3,9 @@ package me.uselessmnemonic.boxofchocolates;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.Category;
-import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
-import me.uselessmnemonic.boxofchocolates.chocolates.DarkChocolateCarmel;
+import me.uselessmnemonic.boxofchocolates.chocolates.DarkChocolateCaramel;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -45,7 +44,7 @@ public class BoxOfChocolatesPlugin extends JavaPlugin implements SlimefunAddon {
         Category chocolateCategory = new Category(categoryKey, categoryItem);
 
         // create the in-game item
-        SlimefunItemStack itemStack = new SlimefunItemStack("DarkChocolateCarmel", Material.COCOA, "Dark Chocolate Carmel", "Bitter chocolate with a", "gooey carmel center.");
+        SlimefunItemStack itemStack = new SlimefunItemStack("DarkChocolateCaramel", Material.COCOA, "Dark Chocolate Caramel", "Bitter chocolate with a", "gooey caramel center.");
 
         // a crafting recipe (3x3)
         ItemStack[] recipe = {
@@ -55,8 +54,8 @@ public class BoxOfChocolatesPlugin extends JavaPlugin implements SlimefunAddon {
         };
 
         // introduce item into game
-        DarkChocolateCarmel darkChocolateCarmel = new DarkChocolateCarmel(chocolateCategory, itemStack, RecipeType.NULL, recipe);
-        darkChocolateCarmel.register(this);
+        DarkChocolateCaramel darkChocolateCaramel = new DarkChocolateCaramel(chocolateCategory, itemStack, RecipeType.NULL, recipe);
+        darkChocolateCaramel.register(this);
     }
 
     @Override
