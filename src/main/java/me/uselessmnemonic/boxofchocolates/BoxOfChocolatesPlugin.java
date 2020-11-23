@@ -17,7 +17,7 @@ public class BoxOfChocolatesPlugin extends JavaPlugin implements SlimefunAddon {
     /**
      * Singleton access
      */
-    private static BoxOfChocolatesPlugin instance;
+    private static BoxOfChocolatesPlugin instance = null;
     public static BoxOfChocolatesPlugin getInstance() {
         return instance;
     }
@@ -39,12 +39,12 @@ public class BoxOfChocolatesPlugin extends JavaPlugin implements SlimefunAddon {
     public void onEnable() {
 
         // create our chocolate category
-        NamespacedKey categoryKey = BoxOfChocolatesPlugin.getNamespacedKey("Chocolates");
-        CustomItem categoryItem = new CustomItem(Material.COCOA, ChatColor.WHITE + "Dulces de chocolate!");
+        NamespacedKey categoryKey = BoxOfChocolatesPlugin.getNamespacedKey("category_chocolates");
+        CustomItem categoryItem = new CustomItem(Material.COOKIE, ChatColor.WHITE + "Dulces de Chocolate");
         Category chocolateCategory = new Category(categoryKey, categoryItem);
 
         // create the in-game item
-        SlimefunItemStack itemStack = new SlimefunItemStack("DARK_CHOC_CARMEL", Material.COCOA, "Dark Chocolate Caramel", "Bitter chocolate with a", "gooey caramel center.");
+        SlimefunItemStack itemStack = new SlimefunItemStack("DARK_CHOC_CARMEL", Material.COOKIE, "Dark Chocolate Caramel", "Bitter chocolate with a", "gooey caramel center.");
 
         // a crafting recipe (3x3)
         ItemStack[] recipe = {
@@ -54,7 +54,7 @@ public class BoxOfChocolatesPlugin extends JavaPlugin implements SlimefunAddon {
         };
 
         // introduce item into game
-        DarkChocolateCaramel darkChocolateCaramel = new DarkChocolateCaramel(chocolateCategory, itemStack, RecipeType.NULL, recipe);
+        DarkChocolateCaramel darkChocolateCaramel = new DarkChocolateCaramel(chocolateCategory, itemStack, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
         darkChocolateCaramel.register(this);
     }
 
