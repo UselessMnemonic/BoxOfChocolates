@@ -5,6 +5,7 @@ import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.Category;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
+import me.uselessmnemonic.boxofchocolates.chocolates.ChocolateCarrotTruffle;
 import me.uselessmnemonic.boxofchocolates.chocolates.DarkChocolateCaramel;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -44,11 +45,20 @@ public class BoxOfChocolatesPlugin extends JavaPlugin implements SlimefunAddon {
         Category chocolateCategory = new Category(categoryKey, categoryItem);
 
         // create the in-game item
+        // DCC
         SlimefunItemStack itemStack = new SlimefunItemStack("DARK_CHOC_CARMEL", Material.COOKIE, "Dark Chocolate Caramel", "Bitter chocolate with a", "gooey caramel center.");
+        // CCT
+        SlimefunItemStack itemStackCCT = new SlimefunItemStack("CHOC_CARROT_TRUFFLE", Material.COOKIE, "Chocolate Carrot Truffle", "Soft chocolate truffle", "flaky carrot center.");
 
-        // a crafting recipe (3x3)
+        // a crafting recipe (3x3) DCC
         ItemStack[] recipe = {
                 new ItemStack(Material.COCOA_BEANS), new ItemStack(Material.SUGAR), null,
+                null, null, null,
+                null, null, null
+        };
+        // a crafting recipe (3x3) CCT
+        ItemStack[] recipeCCT = {
+          new ItemStack(Material.COCOA_BEANS), new ItemStack(Material.SUGAR), new ItemStack(Material.CARROT),
                 null, null, null,
                 null, null, null
         };
@@ -56,6 +66,11 @@ public class BoxOfChocolatesPlugin extends JavaPlugin implements SlimefunAddon {
         // introduce item into game
         DarkChocolateCaramel darkChocolateCaramel = new DarkChocolateCaramel(chocolateCategory, itemStack, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
         darkChocolateCaramel.register(this);
+
+        // CCT
+        ChocolateCarrotTruffle chocolateCarrotTruffle = new ChocolateCarrotTruffle(chocolateCategory, itemStackCCT, RecipeType.ENHANCED_CRAFTING_TABLE, recipeCCT);
+        chocolateCarrotTruffle.register(this);
+
     }
 
     @Override
